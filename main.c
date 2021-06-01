@@ -3,7 +3,7 @@
 	FileName: main.c
 	FileType: C source file
 	Author: Sandoval Pérez, Michael Eduardo
-	Created on: 31/05/2021
+	Created on: 01/06/2021
 	Description: Creación de un arreglo que almacena matrices de cadenas de caracteres
 */
 ////////////////////////////////////////
