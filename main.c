@@ -3,8 +3,8 @@
 	FileName: main.c
 	FileType: C source file
 	Author: Sandoval Pérez, Michael Eduardo
-	Created on: 01/06/2021
-	Description: Creación de un arreglo que almacena matrices de cadenas de caracteres
+	Created on: 31/05/2021
+	Description: Creación de un arreglo que almacena matrices de cadenas de caracteres definidas con un struct
 */
 ////////////////////////////////////////
 
@@ -43,8 +43,10 @@ int main(int argc, char *argv[])
 
 	ArrayMatricesCadenas array[tam];
 
+	printf("\n\nInsertando matrices al array.\n");
 	while(i < tam)
 	{
+		printf("\nMatriz [%d]: \n", i);
 		printf("Ingresa la cantidad de filas: ");
 		scanf("%d", &posX);
 		printf("Ingresa la cantidad de columnas: ");
@@ -55,9 +57,11 @@ int main(int argc, char *argv[])
 		i++;
 	}
 	
+	printf("\n\nArray de matrices\n");
 	i = 0;
 	while(i < tam)
 	{
+		printf("\nMatriz [%d]\n", i);
 		mostrarDatos(array[i].listaMatrices);
 		i++;
 	}
@@ -100,8 +104,9 @@ void mostrarDatos(ListaMatrices* lista)
 		printf("\n");
 		free(*(lista->matrizCadena.matriz + i));
 	}
-	printf("\n\n");
-	
+	printf("\n");
+
 	free(lista->matrizCadena.matriz);
 	free(lista);
 }
+
